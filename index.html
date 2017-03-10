@@ -11,6 +11,44 @@
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+       .button-90s {
+          width: 18rem;
+          height: 6rem;
+          color: #fff;
+          font-size: 2rem;
+          background-color: #dd77dd;
+          outline: none;
+          border-color: #dd77dd;
+          border-radius: 0.5rem;
+          box-shadow: 0px 6px 0px 0px #aa55aa;
+          cursor: pointer;
+          transition: box-shadow .5s ease-in, transform .5s ease-in; 
+        }
+        .button-90s:hover {
+           background-color: #aa55aa;
+           box-shadow: 0px 0px 0px 0px #994499;
+           transform: translate(0px, 4px);
+         }
+         .sparkle-bg {
+    background-image: url(../img/glitter-2.gif);
+    background-color: transparent;
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: fill;
+         }
+         .chapter-subtitle, .chapter-title {
+            color: #fff !important;
+          }
+         .chapter-subtitle {
+           position: relative;
+           float: right;
+           margin-top: 20% !important;
+         }
+         .fragment.white {
+            /* color: #fff; */
+          }
+    </style>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -20,12 +58,623 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+
+          <h1>Animate the Web with EmberJS</h1>
+
+        <small><a href="jessicajordan.de">Jessica Jordan - @jjordan_dev</a></small>
+        <div class="row">
+          <div class="col-12">
+            <img style="border-radius: 50%; height: 4em; width: auto;"  alt="image of myself" src="./img/jessica-jordan.jpg"/>
+          </div>
+        </div>
+
+      </section>
+      <section>       
+        <h1>What are web animations?</h1>
+      </section>
+      <section id="glitter-title-1">       
+        <h2></h2>
+           <div class="row">
+            <div class="col s12">
+              <button class="button-90s" onclick="glitterify('#glitter-title-1');">Launch Best Animations</button>
+            </div>
+            <p class="fragment fade-up">CSS3</p>
+            <p class="fragment fade-up">Animated Gifs</p>
+           </div>
+           
+           <aside class="notes">
+What do we often think about when we hear the term 'animation'?
+animated interactions on the web
+Let's talk about animated content
+              <p>still used for web and console games, cartoons, business apps and more</p>
+           </aside>
+      </section>
+      <section>       
+        <h2></h2>
+           <div class="row">
+            <div class="col s3 fragment">
+              <img height="300" src="./img/logosjs/liquid-fire.svg" alt="Liquid Fire" />
+            </div>
+            <div class="col s3 fragment fade-up">
+             <p class="fragment fade-up">Ember Liquid Fire</p>
+            </div>
+           </div>
+           <aside class="notes">
+What do we often think about when we hear the term 'animation'?
+animated interactions on the web
+Let's talk about animated content
+              <p>still used for web and console games, cartoons, business apps and more</p>
+           </aside>
+      </section>
+
+      <section>       
+        <h2></h2>
+           <div class="row">
+            <div class="col s12 fragment fade-up">
+              <img height="300" src="./img/sugar.jpg" alt="sugar dispenser" />
+            </div>
+            <div class="col s12 fragment fade-up">
+              <img height="150" src="./img/ux.png" alt="UX" />
+            </div>
+           </div>
+           <p class="fragment fade-up">Animated Sugar for Your UX</p>
+           <aside class="notes">
+What do we often think about when we hear the term 'animation'?
+animated interactions on the web
+Let's talk about animated content
+              <p>still used for web and console games, cartoons, business apps and more</p>
+           </aside>
+      </section>
+
+      <section>       
+           <div class="row">
+            <div class="col s12 fragment fade-up">
+              <img height="300" src="./img/ppg.gif" alt="PowerPuff Girls" />
+            </div>
+           </div>
+           <p class="fragment fade-up"><strong>Animations</strong> On The Web</p>
+           <p class="fragment fade-up">Storytelling through images</p>
+           <aside class="notes">
+What do we often think about when we hear the term 'animation'?
+animated interactions on the web
+Let's talk about animated content
+              <p>still used for web and console games, cartoons, business apps and more</p>
+           </aside>
+      </section>
+      <section>
+        <h2>Let's talk about animations</h2>
+        <ul>
+           <li class="fragment fade-up">Origin Of Animations</li>
+           <li class="fragment fade-up">Web Tools and APIs for creating animations</li>
+           <li class="fragment fade-up">How to create an animation with these in Ember</li>
+        </ul>
+      </section>
+      <section data-background-color="#42f4f4">  
+           <h1 class="chapter-title">Animations</h1>     
+           <h2 class="chapter-subtitle fragment fade-up">History ></h2>
+      </section>
+
+      <section>
+        <h2>Animations - A Defintion</h2>
+        <p class="fragment fade-up">"Animation is the process of making the illusion of motion and the illusion of change by means of the rapid display of a sequence of images that minimally differ from each other."</p>
+      </section>
+
+
+      <section>       
+           <div class="row">
+            <div class="col s12">
+              <img height="300" src="./img/squirrel.jpg" alt="Squirrel" />
+            </div>
+           </div>
+           <p class="fragment fade-up">Sequence of Images + Right Frequency -> animations</p>
+      </section>
+
+
+      <section>       
+           <h2>Animations have a long history</h2>
+           <div class="row">
+            <div class="col s6 fragment fade-up">
+              <img height="300" src="./img/kistoscope.gif" alt="Steamboat" />
+            </div>
+            <div class="col s6 fragment fade-up">
+              <img height="300" src="./img/kistoscope2.jpg" alt="Kisto 2" />
+            </div>
+           </div>
+           <p class="fragment fade-up"><small>19th century animation devices: Phenakistoscope</small></p>
+      </section>
+
+      <section>       
+           <div class="row">
+            <div class="col s3 fragment fade-up">
+              <img height="400" src="./img/steamboat.jpg" alt="Steamboat" />
+            </div>
+           </div>
+           <p class="fragment fade-up">first sound animated movies in the 1920s</p>
+           <small>1928 - Steamboat Willie - Disney</small>
+      </section>
+
+
+      <section data-background-color="#42f4f4">  
+           <h1 class="chapter-title">Animations</h1>     
+           <h2 class="chapter-subtitle fragment fade-up">Web Tools and Web APIs</h2>
+      </section>
+
+ <section>
+                                  <h2 class="fragment fade-up">Flash</h2>
+                                  
+                                  <img class="fragment fade-up" src="./img/flash.png" alt="Flash Logo" />
+                                  
+                                  
+                                  <aside class="notes">
+                                  In the early 2000s, Flash was widely installed on desktop computers, and was commonly used to display interactive web pages, online games, and to playback video and audio content.[2] In 2005, YouTube was founded by former PayPal employees, and it used Flash Player as a means to display compressed video content on the web.[2]
+                                  <p>still used for web and console games, cartoons, business apps and more</p>
+                                  </aside>
+                                 
+                                </section>
+                                <section>
+                                  <h2>Flash <br> is <br> an awesome platform for creating animations on the web</h2>
+                                </section>
+                                <section>
+                                  <h2>But then things happened...</h2>
+                                  <img height="400" src="./img/flashutube.jpg" alt="Flash and Youtube" />
+                                
+                                </section>
+				<section>
+				
+
+				<a href="https://www.statista.com/chart/3796/websites-using-flash/" title="Infographic: Bye Bye Flash! | Statista"><img height="200" src="https://infographic.statista.com/normal/chartoftheday_3796_websites_using_flash_n.jpg" alt="Infographic: Bye Bye Flash! | Statista" width="100%" height="auto" style="width: auto; height: 50% !important; max-width:960px;-ms-interpolation-mode: bicubic;"/></a><br />You will find more statistics at <a href="https://www.statista.com/">Statista</a>
+				
+				<aside class="notes">
+				Adobe's Flash was the state-of-the-art for interactive content back when it was introduced in the 1990s. But no longer. It's been shown to eat up battery life on laptops and hurt computing performance. It's had a number of security vulnerabilities. Apple has never supported it on iOS, and Google recently started blocking all Flash ads in its Chrome browser.
+				</aside>
+				
+				</section>
+                                <section>
+                                  <h2>Flash <br> <strong class="pink-text">was?</strong> <br> an awesome platform for creating animations on the web</h2>
+                                </section>
+				<section>
+                                  <img src="./img/flash.png" alt="Flash Logo" />
+				</section>
+                                <section>
+                                  <img src="./img/flashtohtml5.jpg" alt="Flash to HTML 5 Transition" />
+                                  <p>HTML5 as a collective description of modern web standards</p>
+                                </section>
+                                <section>
+                                  <h2>Why open web standards?</h2>
+                                  <p class="fragment fade-up"><strong>open</strong> <br> more independence using less propietary software</p>
+                                  <p class="fragment fade-up"><strong>consistency</strong> <br> use standards established across browsers and devices</p>
+                                  <p class="fragment fade-up"><strong>availability</strong> <br> to your users: anywhere, anytime, on any device</p>
+                                  <img height="150" class="fragment fade-up" src="./img/html5support.jpg" alt="html5 support" />
+                                
+                                </section>
+				<section>
+				<div class="row">
+                                  <div class="col s12 m6">
+                                  
+                                    <img src="./img/html5.png" alt="html 5" />
+                                    
+                                  
+                                  </div>
+                                  <div class="col s12 m6 text-left">
+                                    <p class="fragment fade-up text-left">valid alternative to Flash for delivering multimedia content</p>
+                                  <ul class="text-left">
+                                    <li class="fragment fade-up">videos</li>
+                                    <li class="fragment fade-up">audio</li>
+                                    <li class="fragment fade-up">games</li>
+                                    <li class="fragment fade-up"><strong>animations</strong></li>
+                                  </ul>
+                                  </div>
+				</div>
+				<aside class="notes">
+				                                Slide 2
+                                HTML5 as the new way of doing web animations
+                                HTML5 is more than plain markup - a collective definition of all
+                                animations using open web standards on the web
+Slide 3
+                                Benefits of open web standards
+                                
+                                it's open
+                                it's free
+                                it has great compatibility in the browser landscape
+                                anyone who is into coding can use it to get started
+				</aside>
+				</section>
+                                <section>
+                                  <h2>Choose from a diverse set of web standards</h2>
+                                  <div class="row">
+                                    <div class="col s4 fragment fade-up">
+                                  <img height="200" src="./img/html5.png" alt="html5 support" />
+                                    </div>
+                                    <div class="col s4 fragment fade-up">
+                                  <img height="200" src="./img/css3.png" alt="html5 support" />
+                                    </div>
+                                    <div class="col s4 fragment fade-up">
+                                  <img height="200" src="./img/js.png" alt="html5 support" />
+                                    </div>
+                                  </div>
+                                  <div class="row fragment fade-up">
+                                    <p>...and SVG, WebGL, XML and more</p>
+                                  </div>
+                                </section>
+                                <section class="techs">
+                                  <h2>Choose your technologies: Animations with CSS3</h2>
+                                  <div class="row">
+                                    <div class="col s4">
+                                  <img height="200" src="./img/html5.png" alt="html5 support" />
+                                    </div>
+                                    <div class="col s4 pop-up">
+                                  <img height="200" src="./img/css3.png" alt="html5 support" />
+                                    </div>
+                                    <div class="col s4">
+                                  <img height="200" src="./img/js.png" alt="html5 support" />
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <p>...and SVG, WebGL, XML and more</p>
+                                  </div>
+                                </section>
+                                <section>
+                                  <h2>CSS3 Transitions</h2>
+                                  <div class="row">
+                                    <div class="col s4">
+                                    <style>
+.animation-demo-1 {
+  cursor: pointer;
+  transition: transform .6s ease-out;
+}
+
+.rotate-and-zoom-in {
+  transform: rotate(20deg) scale(4, 4);
+}
+                                    </style>
+                                      <div style="overflow: hidden; height: 8m; width: 8em;" class="frame">
+                                        <img onclick="animationDemo1(event)" style="width: 25em; height: auto; max-width: none; max-height: none; border:none; left: -80%; top: -5%; position: relative;" class="animation-demo-1" src="./img/kimface.jpg" alt="Kim Face" />
+                                      </div>
+                                    </div>
+                                    <div class="col s8">
+<pre class="fragment fade-up"><code>.animation-demo-1 {
+  transition: transform .6s ease-out;
+}
+
+.rotate-and-zoom-in {
+  transform: rotate(20deg) scale(2.5, 2.5);
+}
+</code></pre>
+<p class="fragment fade-up">CSS3 transitions are powerful!</p>
+<ul>
+  <li class="fragment fade-up">any css property can be transitioned</li>
+</ul>
+                            
+                                    </div>
+                                  
+                                  </div>
+                                <script>
+                                  function animationDemo1(e){
+                                    jQuery(e.target).toggleClass('rotate-and-zoom-in');
+                                  }
+                                </script>
+                                <aside class="notes">
+                                Slide 4
+                                What can we us for creating web animations? Part 1
+                                
+                                - CSS3 - 
+                                transitions, and real animation definitions
+                                transition: transform rotate a face shot
+                                
+                                why transitions?
+                                
+                                Animate.css? 
+                                
+                                animate: running up and down a hill in sinus movement
+                                Example for each
+Transitioning certain properties, such as left and margin causes the browser to recalculating styles every frame. This is fairly expensive, and can lead to unnecessary re-paints, especially if you have a lot of elements on the screen. This is especially noticeable in less powerful devices, such as mobiles.
+
+This solution is to offload the rendering to the GPU using CSS transformations. In simple terms, this turns the element into an image during the transition, avoiding any style recalculations which greatly increases performance
+                                </aside>
+                                </section>
+                                <section data-state="css-2">
+                                  <h2>CSS3 Transitions</h2>
+                                  <div class="row">
+                                    <div class="col s4">
+                                    <style>
+.animation-demo-1 {
+  cursor: pointer;
+  transition: transform .6s ease-out;
+}
+
+.rotate-and-zoom-in {
+  transform: rotate(20deg) scale(4, 4);
+}
+                                    </style>
+                                      <div style="overflow: hidden; height: 8em; width: 8em;" class="frame">
+                                        <img style="width: 25em; height: auto; max-width: none; max-height: none; border:none; left: -80%; top: -5%; position: relative;" class="animation-demo-1" src="./img/kimface.jpg" alt="Kim Face" />
+                                      </div>
+                                    </div>
+                                                                    <script>
+                                  function animationDemo2(){
+                                    window.setTimeout(function(){ jQuery('.animation-demo-1').toggleClass('rotate-and-zoom-in');}, 1200);
+                                  };
+                                </script>
+                                    <div class="col s8">
+                                    <p>Use classNameBindings to leverage CSS transitions in Ember</p>
+                                    <p class="fragment fade-up">{{zoomin-component}}</p>
+<pre class="fragment fade-up">// in app/components/zoomin-component/component.js
+//...
+classNameBindings: ['isZoomedIn:rotate-and-zoom-in'],
+//...
+click(){
+  this.toggleProperty('isZoomedIn');
+}
+//...
+</code></pre>
+                            
+                                    </div>
+                                  
+                                  </div>
+                                </section>
+                                <section data-state="css-3">
+                                  <h2>CSS3 Transitions</h2>
+                                  <div class="row">
+                                    <div class="col s4">
+                                    <style>
+.animation-demo-1 {
+  cursor: pointer;
+  transition: transform .6s ease-out;
+}
+
+.rotate-and-zoom-in {
+  transform: rotate(20deg) scale(4, 4);
+}
+                                    </style>
+                                      <div style="overflow: hidden; height: 8em; width: 8em;" class="frame">
+                                        <img style="width: 25em; height: auto; max-width: none; max-height: none; border:none; left: -80%; top: -5%; position: relative;" class="animation-demo-1" src="./img/kimface.jpg" alt="Kim Face" />
+                                      </div>
+                                    </div>
+                                                                    <script>
+                                  function animationDemo2(){
+                                    window.setTimeout(function(){ jQuery('.animation-demo-1').toggleClass('rotate-and-zoom-in');}, 1200);
+                                  };
+                                </script>
+                                    <div class="col s8">
+                                    <p>Certain CSS properties are especially efficient when animated</p>
+                                    <p class="fragment fade-up">Position - transform: translate(x,y)</p>
+                                    <p class="fragment fade-up">Scale - transform: scale(x,y)</p>
+                                    <p class="fragment fade-up">Rotation - transform: rotate(xdeg)</p>
+                                    <p class="fragment fade-up">Opacity - opacity: x [0...1]</p>
+                                    </div>
+                                  
+                                  </div>
+                                  <aside class="notes">
+                                    these properties are all hardware-accelerated in modern browsers
+                                    improve perfomance by not forcing the browser to recalculate styles and repaint whole layers
+                                    instead draw layers only out onto the screen
+                                    
+                                  </aside>
+                                </section>
+
+                                <section class="techs">
+                                  <h2>Animations with JavaScript</h2>
+                                  <div class="row">
+                                    <div class="col s4">
+                                  <img height="200" src="./img/html5.png" alt="html5 support" />
+                                    </div>
+                                    <div class="col s4">
+                                  <img  height="200" src="./img/css3.png" alt="css support" />
+                                    </div>
+                                    <div class="col s4 pop-up">
+                                  <img height="200" src="./img/js.png" alt="js support" />
+                                    </div>
+                                  </div>
+                                </section>
+                                <section class="js-libraries">
+                                <h2>Loads of open JavaScript libraries to choose from</h2>
+                                 <div class="row">
+                                  <div class="col s3 fragment fade-up">
+                                    <img src="./img/logosjs/liquid-fire.svg" alt="Liquid Fire" />
+                                  </div>
+                                  <div class="col s3 fragment fade-up">
+                                    <img src="./img/logosjs/d3js.png" alt="Liquid Fire" />
+                                  </div>
+                                  <div class="col s3 fragment fade-up">
+                                    <img src="./img/logosjs/particlesjs.png" alt="Liquid Fire" />
+                                  </div>
+                                  <div class="col s3 fragment fade-up">
+                                    <img src="./img/logosjs/jquery.png" alt="Liquid Fire" />
+                                  </div>
+                                  <div class="col s3 fragment fade-up">
+                                    <img src="./img/logosjs/animejs.png" alt="Liquid Fire" />
+                                  </div>
+                                  <div class="col s3 fragment fade-up">
+                                    <img src="./img/logosjs/threejs.png" alt="Liquid Fire" />
+                                  </div>
+                                  <div class="col s3 fragment fade-up">
+                                    <img src="./img/logosjs/velocityjs.png" alt="Liquid Fire" />
+                                  </div>
+                                  <div class="col s3 fragment fade-up">
+                                    <img src="./img/logosjs/wow.jpg" alt="Liquid Fire" />
+                                    <span>WOW!</span>
+                                  </div>
+
+                                 
+                                 </div>
+                                 <aside class="notes">
+                                 JavaScript
+                                 Lots of libraries out there to help with this
+                                 
+                                 show slides with overflowing logos of all the js libraries
+                                 
+                                 jQuery, D3.js, animate.css, velocity (similar to jquery animate or gs), processing.js 
+                                 </aside>
+                                </section>
+                                <section>
+                                  <h2>HTML5 animations with GreenSock JS</h2>
+                                  
+                                  <img height="200" src="./img/logosjs/gsap.png" alt="Liquid Fire" />
+                                  
+                                 <p class="fragment fade-up"> "[...] GSAP is packed with features that make most other engines look like cheap toys".</p>
+                                </section>
+
+                                <section>
+                                  <h2>Web Animations API</h2>
+                                  
+                                  <p>Native Web API</p>
+                                  <p>allows synchronization of animations by means of a Timing and Animation Model</p>
+<pre class="fragment fade-up"><code>
+// KeyFrameEffect Objects: 
+var rotating = [
+  { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
+  { color: '#431236', offset: 0.333},
+  { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
+];
+</pre></code>
+                                </section>
+      <section data-background-color="#42f4f4">  
+           <h1 class="chapter-title">Animations</h1>     
+           <h2 class="chapter-subtitle fragment fade-up">WAAPI & Ember</h2>
+      </section>
+
+      <section>
+         <h3>Ember's strength: Components</h3>
+<pre class="fragment fade-up">
+<code>         {{comic-panel}}
+</pre></code>
+         <p class="fragment fade-up">which animates our character</p>
+      </section>
+
+      <section>
+         <h1>Component Reusability</h1>
+<pre class="fragment fade-up"><code>let characterObject = {
+      .....,
+       keyFrames: [
+        { backgroundPosition: '0 0' },
+        { backgroundPosition: `${maxLengthOfMySpriteSheet} 0` }
+      ],
+      .....
+   };
+</pre></code>
+         <p class="fragment fade-up">which animates our character</p>
+      </section>
+
+      <section>
+        <pre class="fragment fade-up"><code>{{comic-panel comicLayer=characterObject}}</pre></code>
+      </section>
+
+      <section>
+<pre class="fragment fade-up"><code>let characterObject = {
+      .....,
+      animationOptions: {
+        duration: 500,
+        easing: `steps(${numOfSprites}, end)`,
+        iterations: 'Infinity'
+      }
+      .....
+   };
+</pre></code>
+      </section>
+      <section>
+         <h2>Creating and starting the animation</h2>
+<pre class="fragment fade-up"><code>
+/* app/components/comic-panel/component.js */
+export default Ember.Component.extend({
+  ...
+  startAnimation: Ember.on('didRender', function() {
+    let keyFrames = this.get('keyFrames');
+    let animationOptions = this.get('animationOptions');
+    this.$()[0].animate(keyFrames, animationOptions);
+  }),
+  ...
+</pre></code>
+      </section>
+      <section>
+         <h2>Controlling the animation</h2>
+<pre class="fragment fade-up"><code>
+/* app/components/comic-panel/component.js */
+export default Ember.Component.extend({
+  ...
+  actions: {
+    play() {
+      this.get('timelineAnimations').play();
+      this.set('isPlaying', true);
+    },
+    pause() {
+      this.get('timelineAnimations').pause();
+      this.set('isPlaying', false);
+    }
+  },
+  ...
+</pre></code>
+      </section>
+      <section> 
+        <h2 class="fragment fade-up">Multi-layered animations</h2>
+        <img src="./img/layers.png" alt="Layers" />
+      </section>
+      <section>
+         <h2>Several layers in our animation</h2>
+<pre class="fragment fade-up"><code>
+/* app/components/comic-panel/template.hbs */
+  {{comic-layer keyFrames=comicLayer.keyFrames
+                animationOptions=comicLayer.animationOptions}}
+</pre></code>
+      </section>
+      <section>
+        <h2>Not really more fancy than $.animate(), no?</h2>
+        <p class="fragment fade-up">WAAPI has more to offer, but let's check <a target="caniuse" href="http://caniuse.com/#search=web-animation">the browser support for those features</a></p>
+      </section>
+      <section>
+        <img class="fragment fade-up" src="./img/heart.png" alt="Heart" height="250"/>
+        <h2 class="fragment fade-up"><a href="https://github.com/web-animations/web-animations-js" target="grihub">Web Animations JS Polyfill</a></h2>
+        <p class="fragment fade-up">Support for not yet supporting browsers and new features with web-animations-next polyfill</p>
+      </section>
+      <section>
+        <h2>Of course....</h2>
+        <p class="fragment fade-up">...there's an addon for that!</p>
+        <img class="fragment fade-up" src="./img/heart.png" alt="Heart" height="250"/>
+<pre class="fragment fade-up"><code>
+ember install ember-web-animations-next-polyfill
+
+</pre></code>
+      </section>
+      <section>
+        <h2>What do we get from that?</h2>
+<pre class="fragment fade-up"><code>
+/* app/components/comic-panel/component.js */
+export default Ember.Component.extend({
+  ...
+  setupAnimation() {
+      let timeline = this.get('timeline'); // returns document.timeline
+      let keyFrameEffects = this.get('keyFrameEffects');
+
+      let group = new GroupEffect(keyFrameEffects);
+
+      let animation = new Animation(group, timeline);
+
+      anima.pause();
+
+      this.set('animation');
+  }),
+  ...
+  actions: {
+    play() {
+      this.get('animation').play();
+    }
+  }
+....
+</pre></code>
+      </section>
+      <section data-background-color="#42f4f4" data-background-image="./img/kim.gif">
+        <h2>Thanks, folks!</h2>
+        <h2 class="fragment fade-up white">Full Demo @EmberConf 2017</a></h2>
+        <p class="fragment fade-up">Jessica Jordan | @jjordan_dev | git: jessica-jordan</p>
+      </section>
 			</div>
 		</div>
 
@@ -46,5 +695,16 @@
 				]
 			});
 		</script>
+              <script>
+                function glitterify(idSelector){
+                  console.log("ids found: " + $(idSelector).length);
+                  let glitterEl = $(idSelector);
+                  let glitterBg = glitterEl;
+                  
+                  glitterBg.toggleClass("sparkle-bg");
+                  
+                }
+              
+              </script>
 	</body>
 </html>
