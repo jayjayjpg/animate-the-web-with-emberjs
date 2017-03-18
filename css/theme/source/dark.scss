@@ -12,14 +12,8 @@
 
 
 // Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../lib/font/source-sans-pro/source-sans-pro.css);
 
-
-// Override theme settings (see ../template/settings.scss)
-$backgroundColor: #222;
-
-$mainColor: #fff;
-$headingColor: #fff;
 
 $mainFontSize: 42px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
@@ -28,9 +22,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
@@ -43,7 +35,3 @@ section.has-light-background {
 	}
 }
 
-
-// Theme template ------------------------------
-@import "../template/theme";
-// ---------------------------------------------

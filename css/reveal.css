@@ -7937,29 +7937,3 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
-
-.reveal .controls .navigate-left {
-  left: 0; }
-
-.techs img, p {
-  opacity: .5;
-  -webkit-transition: -webkit-transform .2s ease-in;
-          transition: transform .2s ease-in; }
-
-.reveal .techs img {
-  max-width: none;
-  max-height: none; }
-
-.reveal .techs .pop-up img {
-  opacity: 1;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1); }
-
-.reveal section h1, .reveal section h2, .reveal section h3, .reveal section h4, .reveal section h5, .reveal section h6, .reveal section p {
-  color: #fafafa; }
-
-.reveal section.js-libraries img, .reveal section.js-libraries svg {
-  height: 5em !important;
-  width: auto !important;
-  max-width: none;
-  max-height: none; }

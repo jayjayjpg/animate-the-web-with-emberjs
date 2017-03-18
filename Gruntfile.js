@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		sass: {
 			core: {
 				files: {
-					'css/reveal.css': 'css/reveal.scss',
+                                        'css/mine.css' : 'css/mine.scss'
 				}
 			},
 			themes: {
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			compress: {
 				files: {
-					'css/reveal.min.css': [ 'css/reveal.css' ]
+					'css/mine.min.css': [ 'css/mine.css' ]
 				}
 			}
 		},
@@ -126,8 +126,8 @@ module.exports = function(grunt) {
 				tasks: 'css-themes'
 			},
 			css: {
-				files: [ 'css/reveal.scss' ],
-				tasks: 'css-core'
+				files: [ 'css/mine.scss', 'css/colors.scss' ],
+				tasks: ['css-core', 'css']
 			},
 			html: {
 				files: root.map(path => path + '/*.html')
