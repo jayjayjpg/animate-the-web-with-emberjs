@@ -65,6 +65,7 @@ $headingSizeMain: 84px;
     }
 
     img {
+       background-color: transparent;
        border: none;
        box-shadow: none;
     }
@@ -85,6 +86,13 @@ $headingSizeMain: 84px;
         box-shadow: none;
       }
 
+      &.dotted {
+        background-image: url("../img/halftonedotted.jpg");
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
 
 
       &.start {
@@ -95,6 +103,11 @@ $headingSizeMain: 84px;
         }
 
       }
+    
+     &.o-hidden {
+       overflow: hidden;
+       height: 14em;
+     }
 
       h1, h2, h3, h4, h5, p {
         color: $black;
@@ -231,13 +244,41 @@ $headingSizeMain: 84px;
   height: 4em;
 }
 
-.racoon-hero {
-  background-image: url('../img/batguy-sprite.png');
+.websurfin {
+  background-image: url('../img/90sinternet.gif');
+  background-position: center center;
   background-attachment: scroll;
-  background-position: 0 0; /*TODO: Animate this! frame ~ 520px */
-  background-size: auto 600%;
-  animation: racoon-fly 10s steps(6, end) infinite; 
+  background-size: contain;
 }
+
+@mixin panel-animation($frameNum, $url, $name) {
+  background-image: url($url);
+  background-attachment: scroll;
+  background-position: 0 0;
+  background-size: auto $frameNum * 100%;
+  animation: $name $frameNum * 0.15s steps($frameNum) infinite;
+}
+
+.racoon-hero {
+  @include panel-animation(6, '../img/batguy-sprite.png', racoon-fly);
+}
+
+.html-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  @include panel-animation(3, '../img/flashonhill-sprite.png', hill);
+
+  &.html-hero-reveal {
+    @include panel-animation(3, '../img/flashonhill-sprite.png', hill-zoom);
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
 
 @keyframes racoon-fly {
   to {
@@ -245,3 +286,15 @@ $headingSizeMain: 84px;
   }
 }
 
+@keyframes hill {
+  to {
+    background-position: 0 300%;
+  }
+}
+
+@keyframes hill-zoom {
+  to {
+    background-position: 0 300%;
+    transform: scale(2, 2) translate(-8em, 4em);
+  }
+}

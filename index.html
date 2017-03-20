@@ -166,7 +166,7 @@
           </ul>
         </article>
       </section>
-      <section data-background-color="#7199C4" data-background-image="./img/kim.gif">
+      <section data-background-color="#7199C4" data-background-image="./img/movingeye.gif">
            <h1 class="chapter-title">Animations</h1>
            <h2 class="chapter-subtitle fragment fade-up">Anatomics</h2>
       </section>
@@ -230,15 +230,16 @@
            <h2 class="chapter-subtitle fragment fade-up">Tools and Web APIs</h2>
       </section>
 
-      <section class="fragment fade-up">
-        <h2 class="fragment fade-up">Web Animations 20 Years Ago?</h2>
-        <p><img height="250" src="./img/90sinternet.gif"></p>
+      <section class="dark">
+        <article class="panel websurfin">
+          <h2 class="fragment fade-up">Web Animations 20 Years Ago?</h2>
+        </article>
       </section>
 
-      <section>
+      <section class="dark" data-background-color="#CB0909">
                                   <h2 class="fragment fade-up">Flash</h2>
                                   
-                                  <img class="fragment fade-up" src="./img/flash.png" alt="Flash Logo" />
+                                  <img class="fragment fade-up" height="400" src="./img/flash3.png" alt="Flash Logo" />
                                   
                                   
                                   <aside class="notes">
@@ -250,12 +251,22 @@
                                  
                                 </section>
                                 <section>
-                                  <h2>The Way to HTML5</h2>
-                                  <img src="./img/flashtohtml5.jpg" alt="Flash to HTML 5 Transition" />
-                                  <p>HTML5 as a collective description of modern web standards</p>
+                                  <article class="panel o-hidden">
+                                    <div id="html-teaser-movie" class="html-hero">
+                                    <h2 id="html-teaser" class="fragment fade-up">Saving The Day on The Web...</h2>
+                                    </div>
+                                  </article>
+                                </section>
+
+                                <section class="o-hidden">
+                                  <article class="panel dotted o-hidden">
+                                    <img height="1000" width="auto" src="./img/htmlhero.png" alt="HTML Hero Flying"/>
+                                    <div class="bubble fragment fade-up" style="position: absolute; bottom: 4em; left: 4em; padding-bottom: 2em;"><h1>HTML 5!</h1></div>
+                                  </article>
                                 </section>
 
                                 <section>
+                                  <article class="panel">
                                   <h2>"HTML5" animations</h2>
                                   <div class="row">
                                     <div class="col s4 fragment fade-up">
@@ -271,6 +282,7 @@
                                   <div class="row fragment fade-up">
                                     <p>...and SVG, WebGL, XML and other Web APIs</p>
                                   </div>
+                                  </article>
                                 </section>
 
 
@@ -286,8 +298,6 @@
                                   <p class="fragment fade-up"><strong>available</strong></p>
                                   </div>
                                   </div>
-                                  
-
                                 </section>
                                 <section>
                                   <h2>Create And Deliver Animations Through The Web Today</h2>
@@ -645,6 +655,18 @@ export default Ember.Component.extend({
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+                Reveal.addEventListener( 'fragmentshown', function( event ) {
+	            // event.fragment = the fragment DOM element
+                    if (event.fragment.getAttribute('id') === 'html-teaser') {
+                       document.getElementById('html-teaser-movie').className += " html-hero-reveal";
+                    };
+                } );
+                Reveal.addEventListener( 'fragmenthidden', function( event ) {
+                    // event.fragment = the fragment DOM element
+                    if (event.fragment.getAttribute('id') === 'html-teaser') {
+                       document.getElementById('html-teaser-movie').classList.remove("html-hero-reveal");
+                    };
+                } );
 		</script>
               <script>
                 function glitterify(idSelector){
