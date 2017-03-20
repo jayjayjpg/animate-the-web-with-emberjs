@@ -1270,7 +1270,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #FFFB46;
+  color: #343441;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
@@ -8081,6 +8081,17 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .reveal section .dark a, .reveal section .dark .link, .reveal section.dark a, .reveal section.dark .link {
   color: #7199C4; }
+
+.reveal section pre {
+  background-color: transparent;
+  border: none;
+  box-shadow: none; }
+  .reveal section pre code {
+    background-color: transparent;
+    border: none; }
+  .reveal section pre.giant {
+    font-size: 72px;
+    text-align: center; }
 
 .leadfeeder-logo {
   fill: #fff;

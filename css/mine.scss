@@ -201,6 +201,25 @@ $headingSizeMain: 84px;
         }
      }
 
+    pre {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+
+      code {
+        background-color: transparent;
+        border: none;
+
+      }
+
+     &.giant {
+       font-size: $headingSizeSlide;
+       text-align: center;
+     }
+
+
+    }
+
   }
 
 
@@ -225,3 +244,4 @@ $headingSizeMain: 84px;
    background-position: 0 600%;
   }
 }
+
