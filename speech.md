@@ -3,47 +3,61 @@
 # Introduction
 
 Present yourself
-Hi folks, my name is Jessica Jordan and I'm a front-end developer working at Leadfeeder. Leadfeeder offers a SaaS tool for sales management, but - more interesting for most of you - 
-I also have the honor to work with several other great developers on Ember applications.
-As you can assume I'm a big fan of Ember and building things on the web, but there is also another passion that I share with maybe a few more of you in the audience: Animations. Cartoons? 
+Hi folks, my name is Jessica Jordan and I'm a front-end developer who just in the beginning of the year joined the dev team at Leadfeeder. Leadfeeder offers a web tool to leverage 
+web analytics data for sales teams and I have the pleasure to work on ambitious web apps together with other talented Ember developers.
+Besides my joy for my new project, I'm deeply in love with my hometown Berlin - here you can see the tall Alexander Tower
+which can be seen from almost anywhere in the city centre - and enjoy checking out the diverse
+vegetarian cuisine in my free-time, I like to draw a lot and also mingle with other web enthusiasts in the Berlin tech scene.
+I'm one of the co-organizers and oftentimes also co-learners of learning groups and workshops under the umbrella of OpenTechSchool
+Berlin - an organization that aims to bring free knowledge about technology of all kinds to people.
+Also just recently I bumped into Clemens and Joschka who are some other """"lost""" Ember souls in Berlin and we 
+decided to revive the EmberJS Berlin meetup. So if you are ever in town, please join us - we are a very friendly meetup group
+and the stickers we sneak from the EmberJS Munich meetup to hand out are just adorable! 
 
+Besides of all these things, there's another big interest of mine / adoration / I don't know, that I want to share in more detail with you today: And these are Cartoons! Animated Comics??? Animations have made up a huge part of my childhood, with me getting fully 
+emerged in stories and worlds so different from ours, that the producers of these shows decided to actually ditch the live acting and draw it down  :-) 
 
-Storytelling?
-Why animations in the first place?
+If we think about cartoons and take it to a more abstract, higher level perspective, we will realize that those are not much
+else than hand drawn motion picture - or let's animations on the TV. What is also important to not is, that not everything
+that is animated on the TV is an actual cartoon - as there is another important component to it to make it call like so.
 
-And this is what I want to talk about today for the next 25mins. In my talk you will learn more about 
+And we may call this component "Storytelling". We will see that the really interesting and fascinating part of cartoons is the story
+that is conveyed in them and that is transported through an animated narrative. These 
+kind of animations can be educational, purely entertaining or even both. The animation therefore is valuable on its own, 
+but still in the bigger picture of narration just a meands to an end - finally it is a message that is about to transported
+and the animation is its deliverer..... should arrive at our viewers.????
 
-- what animations are (mechanics, definitions)
-- how we bring them to the web today
-- how Ember can help us with creating our own animations along an example of our own animation/animated component
+The interesting thing is now that if we as developers think about animations, there are many different things that might cross our mind 
+instinctively. What might happen is that we think about that edgy hover effect our UX lead asked us to implement last week,
+it might be that we were thinking back at our amazement when we created our first Ember app with Liquid-fire powered page transitions.
+Also, we might think about an ambitious SVG based data visualization to improve the usability of a data-heavy interface we are creating.
+In fact if you are interested in the latter, I would like to highly recommend you Jen Weber's talk on SVG animations and interactions
+in Ember to explore this in greater depth tomorrow afternoon.
 
-
-But before we get started, let's have a look what kind of animations I will be talking about.
-Today I will not be talking about how get that spinner button animation rotating correctly.
-I also won't illustrate how we create meaningful user interactions by the means of SVG-based animations. But in fact, Jen will be giving an awesome talk about that tomorrow.
-Unfortunately, you won't learn anything new about ember-liquidfire today either.
-
+All of these examples of assisting our app's overall user experience through interaction-driven animations 
+may be categorized under the term of Informative UX  which I blatanlty caught up on Sarah Drasner's talk on animations at JSConf.Asia 2016) 
 (Sarah Drasner on Functional Animation - JSCONF.Asia 2016: https://www.youtube.com/watch?v=HaD5z2KqcGk)
 
-All of these examples round up animations in a category??? called informative UX (Sarah Drasner quote, Complex Responsive Animations, CSS Conf 2015), that we a as UI-driven web developers are most familiar with: Enhancing our user's experience  
-But after writing that 101st css3 keyframe, after adding that 53rd bootstrap collapsible ---- crossed ----- materialize collapsible ---- crossed ----- Semantic UI collapsible
-to your website you might wonder: are there any other things I can do with animations on the web?
 
-(Yes)
-
-Storytelling is the keyword. What we have seen again and again in motion picture on the TV or on the cinema screen is the use of animations for evolving a narrative whose purpose
-might be educational or simply for pure entertainment. 
-Since I was little I was a big fan of animated stories - or let's call them cartoons - and tonight I want to show you how we can tell these stories on the web.
-
-But first let's have a closer look into what an animation as I described it earlier is:
-
-
-We can use animations 
-So let's get right into having a look what we mean by talking about web animations tonight:
+But although these are all great and relevant topics to almost anyone here in the room, I in fact won't be talking about any of these.
+Instead I will be coming back to one of my favorite topics from earlier: Storytelling driven-animations. And for this, I would like to in 
+the upcoming 25 mins explore with you how traditional animations are defined and created and how we can bring these kind
+of animations to the web today and to what extent these tools and methods differ from each other / outweigh each other. 
+Finally I will also show you on two more concrete examples how we can merge the best from the world of open Web APis and Ember
+to create our own animations - and easily present them on the web to our readers and viewers.
 
 
 
 # Body
+
+Let's have a quick look how an animation is actually defined - so far one of the more general descriptions of
+animations describes them as ....
+The frequence in which the images are displayed are crucial for the animation emerging. In fact, there is not much to 
+a display of several images in succession if it wasn't to our visual perception to have a non-perfect resolution for sequential
+perception. A really old study by Max Wertheimer (1912) shows that already a lag in the display of two different lines of smaller than 200ms
+will for most people lead to the perception of a fluent motion with 60ms to have been declared as the optimal lag
+interval - other studies claim this sweet spot for animation to 
+be somewhere around 30 - 100 
 
  - Animation - What + Why?
   Definition of Animation: 
