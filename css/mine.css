@@ -8141,6 +8141,27 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     animation-iteration-count: 1;
     animation-fill-mode: forwards; }
 
+.drawing-to-the-canvas {
+  background-image: url("../img/batguy-sprite.png");
+  background-size: auto 300%;
+  background-position: center 0;
+  background-color: transparent;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  position: relative; }
+  .drawing-to-the-canvas .square {
+    border: 1px solid #343441;
+    height: 3em;
+    margin: 0 auto;
+    width: 3em;
+    position: relative; }
+    .drawing-to-the-canvas .square.square-1 {
+      top: 0;
+      left: -1.5em; }
+    .drawing-to-the-canvas .square.square-2 {
+      right: -1.5em;
+      bottom: 0em; }
+
 @keyframes racoon-fly {
   to {
     background-position: 0 600%; } }

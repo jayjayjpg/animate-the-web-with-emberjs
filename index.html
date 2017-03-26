@@ -337,9 +337,8 @@ illustrating again. I started telling stories the way I like to tell stories aga
                                   <p class="fragment fade-up">Powerful Web API which can be leveraged for animations</p>
                                 </section>
                                 <section class="dark" data-background-color="#01172D">
-                                  <h2>Basic Usage</h2>
-                                  <p>The context object</p>
-                                  <pre class="fragment"><code><!-- index.html -->
+                                  <h2>Canvas Context Object</h2>
+                                  <pre class="fragment fade-up"><code><!-- index.html -->
 <canvas id="comic-panel"></canvas></code></pre>
 <pre class="fragment"><code>// drawing.js
 const canvas = document.getElementById('comic-panel');
@@ -358,19 +357,29 @@ if (canvas.getContext) {
                                    <h2>Example: Ember Animation Component based on HTML5 Canvas</h2>
                                    <img src="" alt="Demo Gif - HTML5 Canvas Component" />
                                 </section>
+                                <section class="dark" data-background-color="#01172D">
+                                  <h2>Creating a Canvas Component</h2>
+                                  <pre class="fragment fade-up"><code>{{comic-panel width=width height=height}}</code></pre>
+                                  <pre class="fragment fade-up"><code>// app/components/comic-panel.js
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  tagName: 'canvas'
+})</code></pre>
+                                </section>
                                 <section>
                                   <article class="panel">
                                   <h2>Drawing To The Canvas</h2>
                                    <div class="drawing-to-the-canvas">
-                                     <div class="square-1"></div>
-                                     <div class="square-2"></div>
+                                     <div class="square square-1"></div>
+                                     <div class="square square-2"></div>
                                    </div>
-                                   explains source and destination coordinates for drawImage()
                                   </article>
                                 </section>
 <section class="dark" data-background-color="#01172D">
                                   <h2>Drawing To The Canvas</h2>
-                                  <pre class="fragment"><code>// app/components/comic-panel.js
+<pre class="fragment"><code>// app/components/comic-panel.js
+export default Ember.Component.extend({
   draw() {
     const frameNum = this.get('frameNum');
     const sourceX = this.get('frameHeight') * frameNum;
@@ -379,24 +388,35 @@ if (canvas.getContext) {
     const canvasHeight = this.get('height');
     const img = this.get('imgObject');
     const destinationXY = 1000;
- 
-    // clear canvas from previous draw
+  }
+})
+</code></pre>
+</section>
+
+<section class="dark" data-background-color="#01172D">
+                                  <h2>Drawing To The Canvas</h2>
+                                  <pre class="fragment"><code>/* app/components/comic-panel.js */  
+  draw() {
+    /* .... */
+    /* clear canvas from previous draw */
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
-    // draw image to the canvas
-    ctx.drawImage(img, 0, sourceX, destinationXY, canvasWidth, 
-                  0, 0, destinationXY, 
+    /* draw image to the canvas */
+    ctx.drawImage(img, 0, sourceX, destinationXY, 
+                  canvasWidth, 0, 0, destinationXY, 
                   canvasHeight);
   }
-</code></pre></p>
-<pre class="fragment fade-up"><code>// app/components/comic-panel.js
+</code></pre>
+<pre class="fragment fade-up"><code>/* app/components/comic-panel.js */
 startDrawing: Ember.on('didInsertElement', function() {
   const ctx = this.$('#comic-panel')[0].getContext('2d');
+  // const ctx = this.get('element').getContext('2d');
   this.set('ctx', ctx);
   this.draw();
 })
 </code></pre>
                               </section>
+
 <!-- <section class="dark" data-background-color="#01172D">
 <h2>Making The Animation Responsive</h2>
       const image = new Image();
@@ -408,8 +428,14 @@ startDrawing: Ember.on('didInsertElement', function() {
       };
      image.src = this.get('imgSrc');
 </section> -->
+<section>
+  <article class="panel">
+    <h2>Getting Actions Hooked In</h2>
+    <img src="#" alt="Gif of button clicking through animation step by step" />
+  </article>
+</section>
 <section class="dark" data-background-color="#01172D">
-<h2>Actions For Animation Control</h2>
+<h2>Creating the Action</h2>
 <pre class="fragment fade-up"><code>// app/components/comic-panel.js
   actions: {
     nextFrame() {
@@ -429,7 +455,7 @@ draw: Ember.observer('frameNum', function() {
 }
 </pre></code>
 </section>
-<section>
+<section class="dark" data-background-color="#01172D">
   <h2>Run Animation On PageLoad</h2>
 <pre class="fragment fade-up"><code>// app/components/comic-panel.js
 loop() {
@@ -439,11 +465,51 @@ loop() {
 }
 </pre></code>
 </section>
-                                <section class="dark" data-background-color="#01172D">
-                                  <h2>Web Animations API</h2>
-                                  <p>Native Web API</p>
-                                  <p>CSS3 based Keyframe Effects</p>
-                                  <p>Integrated Playback Control</p>
+<section>
+  <article class="panel">
+    <h2>Demo Final</h2>
+    <img src="#" alt="Gif for running canvas component"/>
+  </article>
+</section>
+<section>       
+  <article class="panel">
+    <h2>HTML5 Canvas Concluded</h2>
+    <ul>
+      <li class="fragment fade-up">Performance</li>
+      <li class="fragment fade-up">Developer Control</li>
+      <li class="fragment fade-up">Developer Experience</li>
+      <li class="fragment fade-up">Accessibility</li>
+    </ul>
+    <div class="browser-support row fragment fade-up">
+      <p class="col s12">Supported by</p>
+      <div class="col s3 chrome">
+
+      </div>
+      <div class="col s3 firefox">
+
+      </div>
+      <div class="col s3 safari">
+
+      </div>
+      <div class="col s3 ie">
+
+      </div>
+    </div>
+  </article>
+</section>
+<section data-background-color="#42f4f4">
+  <h1 class="chapter-title">Animations with the Web Animations API</h1>
+</section>
+<section>
+  <article class="panel">
+    <h2 class="fragment fade-up">Web Animations API</h2>
+    <p class="fragment fade-up check-mark">Animation & Timeline Models for Animation Orchestration</p>
+    <p class="fragment fade-up check-mark">Animation Playback Controls</p>
+  </article>
+</section>
+
+<section class="dark" data-background-color="#01172D">
+  <h2>Keyframe Effects</h2>
 <pre class="fragment fade-up"><code>
 // KeyFrameEffect Objects: 
 var rotating = [
@@ -456,14 +522,13 @@ var rotating = [
   { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', 
     color: '#000' 
   }
-];
+]; /* Use my own examples so people can see what these effects relate to */
 </pre></code>
                                 </section>
-      <section data-background-color="#42f4f4">  
-           <h1 class="chapter-title">Animations</h1>     
-           <h2 class="chapter-subtitle fragment fade-up">WAAPI & Ember</h2>
+      <section>
+        <h2>Demo: Animation Component in Ember based on WAAPI</h2>
+        <img src="#" alt="animated gif for ember component" />
       </section>
-
       <section><h2>Creating Reusability in Ember</h2>
          add image of controller ,view model
      </section>
