@@ -143,7 +143,7 @@
             <div class="col s12 fragment fade-up">
               <p>Data Visualization</p>
               <img height="150" src="./img/SVG.svg" alt="SVG Icon" />
-              <small class="fragment fade-up">...btw - check out Jen Weber's EmberConf talk on "SVG Animation and Interaction in Ember" tomorrow!</small>
+              <!-- <small class="fragment fade-up">Jen Weber's EmberConf talk on "SVG Animation and Interaction in Ember" tomorrow</small> -->
             </div>
          </article>
       </section>
@@ -359,8 +359,8 @@ if (canvas.getContext) {
                                 </section>
                                 <section>
                                    <h2>HTML5 Canvas & Ember Components</h2>
-                                   <p class="fragment fade-up">Let's build this!</p>
-                                   <img src="" alt="Demo Gif - HTML5 Canvas Component" />
+                                   <p class="fragment fade-up">Let's build it!</p>
+                                   <a href="http://localhost:4200/demo-canvas" target="cdemo"><img src="./img/cdemo-1.jpg" alt="Demo Gif - HTML5 Canvas Component" /></a>
                                 </section>
                                 <section class="dark" data-background-color="#01172D">
                                   <h2>Creating the Component</h2>
@@ -467,7 +467,7 @@ setup: Ember.observer('pseudoImg', function() {
 <section>
   <article class="panel">
     <h2>Getting Actions Hooked In</h2>
-    <img src="#" alt="Gif of button clicking through animation step by step" />
+    <img src="./img/cdemo-2.jpg" alt="Gif of button clicking through animation step by step" />
   </article>
 </section>
 <section class="dark" data-background-color="#01172D">
@@ -520,13 +520,13 @@ loop() {
 <section>
   <article class="panel">
     <h2>Demo Final</h2>
-    <img src="#" alt="Gif for running canvas component"/>
+    <a href="http://localhost:4200/demo-canvas" target="cdemo"><img src="./img/cdemo-2.jpg" alt="Gif of button clicking through animation step by step" /></a>
   </article>
 </section>
 <section>       
   <article class="panel">
     <h2>HTML5 Canvas - Good To Know</h2>
-      <p class="mt-1 fragment fade-up"><img style="top: .3em; position: relative;" height="30" src="./img/heart.png">Performance</p>
+      <p class="mt-1 fragment fade-up"><img style="top: .3em; position: relative;" height="20" src="./img/heart.png">Performance</p>
       <p class="fragment fade-up"><img style="top: .3em; position: relative;" height="20" src="./img/heart.png">Developer Control</p>
       <p class="fragment fade-up">? Creator Experience</p>
       <p class="fragment fade-up">? Accessibility</p>
@@ -543,6 +543,7 @@ loop() {
         <article class="panel">
           <h2>...but the browser support?</h2>
           <a href="http://caniuse.com/#search=web%20animations" target="waapo"><img height="400" src="./img/waapo.jpg" alt="Web Animations Browser support"/></a>
+          <p class="fragment fade-up">That's a "No", right?</p>
         </article>
       </section>
       <section>
@@ -579,7 +580,7 @@ var rotating = [
                                 </section>
       <section>
         <h2>Demo: Animation Component in Ember based on WAAPI</h2>
-        <img src="#" alt="animated gif for ember component" />
+        <img src="./img/wdemo-1.jpg" alt="animated gif for ember component" />
       </section>
 
       <section class="dark" data-background-color="#01172D">
@@ -658,6 +659,12 @@ export default Ember.Component.extend({
 </pre></code>
       </section> -->
       <section>
+        <article class="panel">
+        <h2 class="fragment fade-up">Is there more to animations than this?</h2>
+        <img class="fragment fade-up" src="./img/wdemo-2.jpg" alt="Web Animations Demo Layered" />
+        </article>
+      </section>
+      <section>
         <article class="panel"> 
         <h2 class="fragment fade-up">Multi-layered animations</h2>
         <img src="./img/layers.png" alt="Layers" />
@@ -667,9 +674,9 @@ export default Ember.Component.extend({
          <h2>Embedding comic layer sub components</h2>
 <pre class="fragment fade-up"><code>
 /* app/components/comic-panel/template.hbs */
-{{#each comicLayerList as |comicLayer|}}
-  {{comic-layer keyFrames=comicLayer.keyFrames
-                animationOptions=comicLayer.animationOptions}}
+{{#each comicLayerList as |layer|}}
+  {{comic-layer keyFrames=layer.keyFrames
+                animationOptions=layer.animationOptions}}
 {{/each}}
 </pre></code>
       </section>
@@ -677,32 +684,41 @@ export default Ember.Component.extend({
      <h2>Synchronize the animation layers</h2>
 <pre class="fragment fade-up"><code>
 /* app/components/comic-panel/component.js */
-export default Ember.Component.extend({
-  ...
   setupAnimation() {
-      let timeline = this.get('timeline'); // returns document.timeline
-      let keyFrameEffects = this.get('keyFrameEffects');
+      const timeline = this.get('timeline');
+      const keyFrameEffects = this.get('keyFrameEffects');
 
-      let group = new GroupEffect(keyFrameEffects);
+      const group = new GroupEffect(keyFrameEffects);
 
-      let animation = new Animation(group, timeline);
+      const animation = new Animation(group, timeline);
 
-      anima.pause();
+      animation.pause();
 
       this.set('animation');
-  }),
-  ...
+  },
+</pre></code>
+</section>
+      <section class="dark" data-background-color="#01172D">
+     <h2>Synchronize the animation layers</h2>
+<pre class="fragment fade-up"><code>
+/* app/components/comic-panel/component.js */
+export default Ember.Component.extend({
+  // ...
   actions: {
     play() {
       this.get('animation').play();
     }
+    pause() {
+      this.get('animation').pause();
+    }
   }
-....
+  // ...
+})
 </pre></code>
       </section>
 <section>
  <h2>Demo Final</h2>
- <img alt="gif of animated component" src="#" />
+ <a target="wdemo" href="http://localhost:4200/demo-waapi"><img src="./img/wdemo-2.jpg" alt="Web Animations Demo Layered" /></a>
 </section>
 <section>
   <article class="panel">
