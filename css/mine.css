@@ -8162,8 +8162,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   background-size: contain; }
 
 .racoon-hero {
-  background-image: url("../img/batguy-sprite.png");
+  background-image: url("../img/batguy-sprite-3.png");
   background-attachment: scroll;
+  background-repeat: repeat-y;
   background-position: 0 0;
   background-size: auto 600%;
   animation: racoon-fly 0.9s steps(6) infinite;
@@ -8181,12 +8182,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   right: 0;
   background-image: url("../img/flashonhill-sprite.png");
   background-attachment: scroll;
+  background-repeat: repeat-y;
   background-position: 0 0;
   background-size: auto 300%;
   animation: hill 0.45s steps(3) infinite; }
   .html-hero.html-hero-reveal {
     background-image: url("../img/flashonhill-sprite.png");
     background-attachment: scroll;
+    background-repeat: repeat-y;
     background-position: 0 0;
     background-size: auto 300%;
     animation: hill-zoom 0.45s steps(3) infinite;
@@ -8195,7 +8198,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     animation-fill-mode: forwards; }
 
 .drawing-to-the-canvas {
-  background-image: url("../img/batguy-sprite.png");
+  background-image: url("../img/batguy-sprite-3.png");
   background-size: auto 200%;
   background-position: center 0;
   background-color: transparent;

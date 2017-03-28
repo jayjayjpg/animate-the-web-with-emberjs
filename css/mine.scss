@@ -308,13 +308,14 @@ $headingSizeMain: 84px;
 @mixin panel-animation($frameNum, $url, $name) {
   background-image: url($url);
   background-attachment: scroll;
+  background-repeat: repeat-y;
   background-position: 0 0;
   background-size: auto $frameNum * 100%;
   animation: $name $frameNum * 0.15s steps($frameNum) infinite;
 }
 
 .racoon-hero {
-  @include panel-animation(6, '../img/batguy-sprite.png', racoon-fly);
+  @include panel-animation(6, '../img/batguy-sprite-3.png', racoon-fly);
   padding-top: 2rem;
   .asided {
     position: absolute;
@@ -341,7 +342,7 @@ $headingSizeMain: 84px;
 
 .drawing-to-the-canvas {
 
-  background-image: url('../img/batguy-sprite.png');
+  background-image: url('../img/batguy-sprite-3.png');
   background-size: auto 200%;
   background-position: center 0;
   background-color: transparent;

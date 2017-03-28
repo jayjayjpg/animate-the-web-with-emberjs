@@ -498,7 +498,7 @@ draw: Ember.observer('frameNum', function() {
 loop() {
   this.draw();
   this.nextFrame();
-  Ember.run.later(this, this.loop, 1000);
+  Ember.run.later(this, this.loop, 100);
 }
 </pre></code>
 </section>
@@ -526,8 +526,8 @@ loop() {
 <section>       
   <article class="panel">
     <h2>HTML5 Canvas - Good To Know</h2>
-      <p class="mt-1 fragment fade-up"><img style="top: .4em; position: relative;" height="30" src="./img/heart.png">Performance</p>
-      <p class="fragment fade-up"><img style="top: .4em; position: relative;" height="30" src="./img/heart.png">Developer Control</p>
+      <p class="mt-1 fragment fade-up"><img style="top: .3em; position: relative;" height="30" src="./img/heart.png">Performance</p>
+      <p class="fragment fade-up"><img style="top: .3em; position: relative;" height="20" src="./img/heart.png">Developer Control</p>
       <p class="fragment fade-up">? Creator Experience</p>
       <p class="fragment fade-up">? Accessibility</p>
   </article>
@@ -537,8 +537,14 @@ loop() {
            <h2 class="chapter-subtitle fragment fade-up">Ember & Web Animations API</h2>
                                 </section>
 <section>
-  <h2 class="fragment fade-up">Web Animations API</h2>
+  <h2 class="fragment fade-up">Web Animations API - Animation Of The Future</h2>
 </section>
+      <section>
+        <article class="panel">
+          <h2>...but the browser support?</h2>
+          <a href="http://caniuse.com/#search=web%20animations" target="waapo"><img height="400" src="./img/waapo.jpg" alt="Web Animations Browser support"/></a>
+        </article>
+      </section>
       <section>
         <article class="panel">
         <img class="fragment fade-up" src="./img/heart.png" alt="Heart" height="250"/>
@@ -587,7 +593,7 @@ var rotating = [
 
 
       <section class="dark" data-background-color="#01172D">
-         <h1>Creating KeyframeEffects</h1>
+         <h2>Creating KeyframeEffects</h2>
 <pre class="fragment fade-up"><code>// app/my-route/controller.js
 let characterObject = {
       .....,
@@ -598,13 +604,11 @@ let characterObject = {
       .....
    };
 </pre></code>
+
       </section>
 
       <section class="dark" data-background-color="#01172D">
-        <pre class="fragment fade-up"><code>{{comic-panel comicLayer=characterObject}}</pre></code>
-      </section>
-
-      <section>
+         <h2>Creating KeyframeEffects</h2>
 <pre class="fragment fade-up"><code>let characterObject = {
       .....,
       animationOptions: {
@@ -615,6 +619,7 @@ let characterObject = {
       .....
    };
 </pre></code>
+<pre class="fragment fade-up"><code>{{comic-panel comicLayer=characterObject}}</pre></code>
       </section>
       <section class="dark" data-background-color="#01172D">
          <h2>Creating and starting the animation</h2>
@@ -630,7 +635,7 @@ export default Ember.Component.extend({
   ...
 </pre></code>
       </section>
-      <section class="dark" data-background-color="#01172D">
+     <!-- <section class="dark" data-background-color="#01172D">
          <h2>Controlling the animation</h2>
 <pre class="fragment fade-up"><code>
 /* app/components/comic-panel/component.js */
@@ -651,7 +656,7 @@ export default Ember.Component.extend({
   },
   ...
 </pre></code>
-      </section>
+      </section> -->
       <section>
         <article class="panel"> 
         <h2 class="fragment fade-up">Multi-layered animations</h2>
@@ -703,9 +708,9 @@ export default Ember.Component.extend({
   <article class="panel">
     <h2>Web Animations API - Good To Know</h2>
     <ul>
-      <p class="fragment fade-up"><img style="top: .4em; position: relative;" height="30" src="./img/heart.png">Creator Experience</p>
-      <p class="fragment fade-up"><img style="top: .4em; position: relative;" height="30" src="./img/heart.png">Developer Control</p>
-      <p class="fragment fade-up"><img style="top: .4em; position: relative;" height="30" src="./img/heart.png">Accessibility</p>
+      <p class="fragment fade-up"><img style="top: .3em; position: relative;" height="20" src="./img/heart.png">Creator Experience</p>
+      <p class="fragment fade-up"><img style="top: .3em; position: relative;" height="20" src="./img/heart.png">Developer Control</p>
+      <p class="fragment fade-up"><img style="top: .3em; position: relative;" height="20" src="./img/heart.png">Accessibility</p>
       <p class="fragment fade-up">? Performance</p>
     </ul>
   </article>
@@ -735,18 +740,21 @@ export default Ember.Component.extend({
           </ul>
         </article>
       </section> -->
-      <section data-background-color="#42f4f4" data-background-image="./img/kim.gif">
-        <h2 class="chapter-title">Animations</h2>
-        <p class="chapter-subtitle">Epilogue</p>
+      <section data-background-color="#7199C4" data-background-image="./img/kim.gif">
+        <h1 class="chapter-title">Animations</h1>
+        <h2 class="chapter-subtitle">Epilogue</h2>
       </section>
       <section>
         <h2 class="fragment fade-up">The story about animations continues until today</h2>
       </section>
       <section>
-        <h2 class="fragment fade-up">With<img height="30" style="position: relative; top: .4em" src="./img/heart.png" alt="heart" />Ember 
+        <h2 class="fragment fade-up">With <img height="60" style="position: relative; top: .3em" src="./img/heart.png" alt="heart" /> Ember 
          &amp; Open Web Standards
         </h2>
-        <p class="fragment fade-up">it's now up to you to become the next animating storyteller!</p>
+      </section>
+      <section>
+        <h2 class="fragment fade-up">The Endless Canvas Is yours to be animated
+        </h2>
       </section>
       <section>
        <article class="panel racoon-hero">
