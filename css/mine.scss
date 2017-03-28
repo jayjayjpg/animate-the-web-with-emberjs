@@ -55,6 +55,11 @@ $headingSizeMain: 84px;
 
    }
 
+   quote {
+     font-style: italic;
+     font-size: 36px;
+     margin-bottom: .5em;
+   }
     &.js-libraries {
       img, svg {
         height: 5em !important;
@@ -68,14 +73,52 @@ $headingSizeMain: 84px;
        background-color: transparent;
        border: none;
        box-shadow: none;
+       &.round {
+         border-radius: 50%;
+       } 
     }
 
+    .round {
+        overflow: hidden;
+        border-radius: 50%;
+        width: 5em;
+        height: 5em;
+        text-align: center;
+        img {
+          position: relative;
+          width: auto;
+          height: 500px;
+          margin: 0 auto;
+        }
+        &.round-one {
+          position: absolute;
+          top: 3em; left: 5em;
+        }
+        &.round-two {
+          position: absolute;
+          top: 3em; right: 5em;
+        }
+        &.round-three {
+          position: absolute;
+          bottom: 3em; left: 5em;
+        }
+        &.round-four {
+          position: absolute;
+          bottom: 3em; right: 5em;
+          img {
+            width: 300px;
+            height: 200px;
+            top: -1em;
+          }
+        }
+
+     }
     .panel {
       border: .4rem solid $mainColor;
       box-shadow: .5rem .5rem .5rem lighten($black, 25%);
       color: $mainColor;
       background-color: $highlight;
-      margin: -2.5rem -2rem;
+      margin: -2.5rem 0rem;
       min-height: 14em;
       padding: 2.5rem 2rem;
       position: relative;
@@ -148,8 +191,8 @@ $headingSizeMain: 84px;
   position: relative;
   width: 0;
   height: 0;
-  border-top: 9px solid transparent;
-  border-right: 9px solid red;
+  border-top: 18px solid transparent;
+  border-right: 18px solid $black;
   -webkit-transform: rotate(10deg);
   -moz-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
@@ -159,12 +202,12 @@ $headingSizeMain: 84px;
   content: "";
   position: absolute;
   border: 0 solid transparent;
-  border-top: 3px solid red;
+  border-top: 6px solid $black;
   border-radius: 20px 0 0 0;
-  top: -12px;
-  left: -9px;
-  width: 12px;
-  height: 12px;
+  top: -22px;
+  left: -18px;
+  width: 24px;
+  height: 24px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -233,9 +276,20 @@ $headingSizeMain: 84px;
 
     }
 
+      a, .link {
+        color: $highlight-2y;
+      }
+
+  }
+  .controls {
+    display: none;
   }
 
+}
 
+
+.reveal .controls {
+  display: none;
 }
 
 .leadfeeder-logo {
@@ -261,6 +315,12 @@ $headingSizeMain: 84px;
 
 .racoon-hero {
   @include panel-animation(6, '../img/batguy-sprite.png', racoon-fly);
+  padding-top: 2rem;
+  .asided {
+    position: absolute;
+    right: .5em;
+    top: 3em;
+  }
 }
 
 .html-hero {
@@ -282,12 +342,13 @@ $headingSizeMain: 84px;
 .drawing-to-the-canvas {
 
   background-image: url('../img/batguy-sprite.png');
-  background-size: auto 300%;
+  background-size: auto 200%;
   background-position: center 0;
   background-color: transparent;
   background-attachment: scroll;
   background-repeat: no-repeat;
   position: relative;
+  height: 9em;
 
   .square {
     border: 1px solid $black;
@@ -298,18 +359,36 @@ $headingSizeMain: 84px;
 
     &.square-1 {
       top: 0;
-      left: -1.5em;
+      left: -1.2em;
       
     }
 
     &.square-2 {
-       right: -1.5em;
-       bottom: 0em;
+       right: -3em;
+       bottom: -2em;
     }
 
   }
 
 }
+
+     .bubble {
+        display: block;
+        font-size: $bubbleFont;
+        border: .1em solid $black !important;
+        position: absolute;
+        padding: 1em .5em;
+        width: 8em;
+        height: 4em;
+        background-color: $white;
+        border-radius: 50% 50% 50% 50% / 50% 50% 60% 60%;
+        box-shadow: .1em .1em .1em lighten($black, 25%);
+
+        &.smaller-text {
+          font-size: $bubbleFont - 8;
+
+        }
+      }
 
 
 

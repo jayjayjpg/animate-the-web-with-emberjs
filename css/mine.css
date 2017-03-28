@@ -7988,6 +7988,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   font-size: 32px;
   text-align: left; }
 
+.reveal section quote {
+  font-style: italic;
+  font-size: 36px;
+  margin-bottom: .5em; }
+
 .reveal section.js-libraries img, .reveal section.js-libraries svg {
   height: 5em !important;
   width: auto !important;
@@ -7998,13 +8003,47 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   background-color: transparent;
   border: none;
   box-shadow: none; }
+  .reveal section img.round {
+    border-radius: 50%; }
+
+.reveal section .round {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  text-align: center; }
+  .reveal section .round img {
+    position: relative;
+    width: auto;
+    height: 500px;
+    margin: 0 auto; }
+  .reveal section .round.round-one {
+    position: absolute;
+    top: 3em;
+    left: 5em; }
+  .reveal section .round.round-two {
+    position: absolute;
+    top: 3em;
+    right: 5em; }
+  .reveal section .round.round-three {
+    position: absolute;
+    bottom: 3em;
+    left: 5em; }
+  .reveal section .round.round-four {
+    position: absolute;
+    bottom: 3em;
+    right: 5em; }
+    .reveal section .round.round-four img {
+      width: 300px;
+      height: 200px;
+      top: -1em; }
 
 .reveal section .panel {
   border: 0.4rem solid #343441;
   box-shadow: 0.5rem 0.5rem 0.5rem #6d6d88;
   color: #343441;
   background-color: #FFFB46;
-  margin: -2.5rem -2rem;
+  margin: -2.5rem 0rem;
   min-height: 14em;
   padding: 2.5rem 2rem;
   position: relative; }
@@ -8050,8 +8089,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     position: relative;
     width: 0;
     height: 0;
-    border-top: 9px solid transparent;
-    border-right: 9px solid red;
+    border-top: 18px solid transparent;
+    border-right: 18px solid #343441;
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
@@ -8060,12 +8099,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     content: "";
     position: absolute;
     border: 0 solid transparent;
-    border-top: 3px solid red;
+    border-top: 6px solid #343441;
     border-radius: 20px 0 0 0;
-    top: -12px;
-    left: -9px;
-    width: 12px;
-    height: 12px;
+    top: -22px;
+    left: -18px;
+    width: 24px;
+    height: 24px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -8102,6 +8141,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 72px;
     text-align: center; }
 
+.reveal section a, .reveal section .link {
+  color: #01172D; }
+
+.reveal .controls {
+  display: none; }
+
+.reveal .controls {
+  display: none; }
+
 .leadfeeder-logo {
   fill: #fff;
   width: 12em;
@@ -8118,7 +8166,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   background-attachment: scroll;
   background-position: 0 0;
   background-size: auto 600%;
-  animation: racoon-fly 0.9s steps(6) infinite; }
+  animation: racoon-fly 0.9s steps(6) infinite;
+  padding-top: 2rem; }
+  .racoon-hero .asided {
+    position: absolute;
+    right: .5em;
+    top: 3em; }
 
 .html-hero {
   position: absolute;
@@ -8143,12 +8196,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .drawing-to-the-canvas {
   background-image: url("../img/batguy-sprite.png");
-  background-size: auto 300%;
+  background-size: auto 200%;
   background-position: center 0;
   background-color: transparent;
   background-attachment: scroll;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  height: 9em; }
   .drawing-to-the-canvas .square {
     border: 1px solid #343441;
     height: 3em;
@@ -8157,10 +8211,24 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     position: relative; }
     .drawing-to-the-canvas .square.square-1 {
       top: 0;
-      left: -1.5em; }
+      left: -1.2em; }
     .drawing-to-the-canvas .square.square-2 {
-      right: -1.5em;
-      bottom: 0em; }
+      right: -3em;
+      bottom: -2em; }
+
+.bubble {
+  display: block;
+  font-size: 38px;
+  border: 0.1em solid #343441 !important;
+  position: absolute;
+  padding: 1em .5em;
+  width: 8em;
+  height: 4em;
+  background-color: #FAFFF2;
+  border-radius: 50% 50% 50% 50% / 50% 50% 60% 60%;
+  box-shadow: 0.1em 0.1em 0.1em #6d6d88; }
+  .bubble.smaller-text {
+    font-size: 30px; }
 
 @keyframes racoon-fly {
   to {
