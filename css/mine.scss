@@ -79,6 +79,8 @@ $headingSizeMain: 84px;
     }
 
     .round {
+        border: 1px solid $black;
+        background-color: $white;
         overflow: hidden;
         border-radius: 50%;
         width: 5em;
@@ -87,6 +89,7 @@ $headingSizeMain: 84px;
         img {
           position: relative;
           width: auto;
+          max-width: none;
           height: 500px;
           margin: 0 auto;
         }

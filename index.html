@@ -88,7 +88,7 @@
         <h2 class="fragment fade-up">What I do after work</h2>    
         <div  class="row">
             <div class="round round-one fragment fade-up">
-            <img src="./img/food.jpg" alt="Vegan Food"/>
+            <img height="150" width="auto" src="./img/food.jpg" alt="Vegan Food"/>
             </div>
             <div class="round round-two fragment fade-up">
             <img src="./img/kimface.jpg" alt="Drawing Example"/>
@@ -150,7 +150,7 @@
       <section>
           <div style="position: relative;">
           <div style="position: absolute; left: 0; right: 0;" class="fragment fade-up fade-out shrink"><h2>Informative UX</h2>
-            <p>Sarah Drasner on <a href="https://www.youtube.com/watch?v=HaD5z2KqcGk" target="informativeUX">Functional Animation - JSCONF.Asia 2016</a></p>
+           <!-- <p>Sarah Drasner on <a href="https://www.youtube.com/watch?v=HaD5z2KqcGk" target="informativeUX">Functional Animation - JSCONF.Asia 2016</a></p> -->
           </div>
           <h2 style="position: absolute; left: 0; right: 0;" class="fragment fade-up">Storytelling through Animations</h2>
           </div>
@@ -215,7 +215,7 @@
       </section>
 
 
-      <section>
+     <!-- <section>
            <article class="panel">       
            <h2>Animations have a long history...</h2>
            <div class="row">
@@ -228,10 +228,10 @@
            </div>
            <p class="fragment fade-up"><small>19th century animation devices: Phenakistoscope</small></p>
            </article> 
-     </section>
+     </section> -->
 
       <section>
-        <h2>...which continues until today</h2>
+        <h2>The story of animations continues until today</h2>
         <h1 class="fragment fade-up">Animations On The Web</h1>
       </section>
 
@@ -320,14 +320,7 @@
 
       <section>
         <h2>The Endless Canvas</h2>
-        <div class="fragment fade-up">
-        <quote>"It took 5 years and a few specs, until I realized the infinite canvas was right there in front of me,
-all the time. It was my browser.
-It started exploding with HTML5, APIs for web audios, speech recognition, CSS animations specifically.<span class="fragment fade-up">[...]
-I started putting in animations everywhere again. I started
-illustrating again. I started telling stories the way I like to tell stories again."</span></quote>
         <small style="margin-top: 2em;">Rachel Nabors, Keynote "Storytelling on the Shoulders of Giants" - OSCON 2014</small>
-       </div>
       </section>
 
                                 <section class="dark" data-background-color="#7199C4" data-background-image="./img/kim.gif">
@@ -360,7 +353,7 @@ if (canvas.getContext) {
                                 <section>
                                    <h2>HTML5 Canvas & Ember Components</h2>
                                    <p class="fragment fade-up">Let's build it!</p>
-                                   <a href="http://localhost:4200/demo-canvas" target="cdemo"><img src="./img/cdemo-1.jpg" alt="Demo Gif - HTML5 Canvas Component" /></a>
+                                   <a href="https://jessica-jordan.github.io/cartoon-demo/#/demo-canvas" target="cdemo"><img src="./img/cdemo-1.jpg" alt="Demo Gif - HTML5 Canvas Component" /></a>
                                 </section>
                                 <section class="dark" data-background-color="#01172D">
                                   <h2>Creating the Component</h2>
@@ -392,7 +385,7 @@ export default Ember.Component.extend({
 </div>
                                   </article>
                                 </section>
-<section class="dark" data-background-color="#01172D">
+<!-- <section class="dark" data-background-color="#01172D">
                                   <h2>Drawing To The Canvas</h2>
 <pre class="fragment"><code>// app/components/comic-panel.js
 export default Ember.Component.extend({
@@ -407,7 +400,7 @@ export default Ember.Component.extend({
   }
 })
 </code></pre>
-</section>
+</section> -->
 <section class="dark" data-background-color="#01172D">
 <h2>Drawing To The Canvas</h2>
 <pre class="fragment"><code>// app/components/comic-panel.js
@@ -424,7 +417,7 @@ export default Ember.Component.extend({
 })
 </code></pre>
 </section> 
-<section class="dark" data-background-color="#01172D">
+<!-- <section class="dark" data-background-color="#01172D">
                                   <h2>Drawing To The Canvas</h2>
 <pre class="fragment"><code>// app/components/comic-panel.js
 export default Ember.Component.extend({
@@ -439,7 +432,7 @@ export default Ember.Component.extend({
   }
 })
 </code></pre>
-</section>
+</section> -->
 
 
 <section class="dark" data-background-color="#01172D">
@@ -470,10 +463,10 @@ setup: Ember.observer('pseudoImg', function() {
     <img src="./img/cdemo-2.jpg" alt="Gif of button clicking through animation step by step" />
   </article>
 </section>
-<section class="dark" data-background-color="#01172D">
+<!-- <section class="dark" data-background-color="#01172D">
 <h2>Creating the Action</h2>
-<pre class="fragment fade-up"><code>// app/controllers/demo-canvas.js
-  actions: {
+<pre class="fragment fade-up"><code>// app/components/comic-panel.js
+    // ...
     nextFrame() {
       const maxFrameNumber = this.get('maxFrameNumber');
       const currentFrameNumber = this.get('frameNum');
@@ -484,16 +477,15 @@ setup: Ember.observer('pseudoImg', function() {
          this.set('frameNum', 0);
       }
     }
-  }
 </pre></code>
 <pre class="fragment fade-up"><code>// app/components/comic-panel.js
 draw: Ember.observer('frameNum', function() {
   ....
 }
 </pre></code>
-</section>
+</section> -->
 <section class="dark" data-background-color="#01172D">
-  <h2>Run Animation On Actions</h2>
+  <h2>Run Animations</h2>
 <pre class="fragment fade-up"><code>// app/components/comic-panel.js
 loop() {
   this.draw();
@@ -503,24 +495,22 @@ loop() {
 </pre></code>
 </section>
 <section class="dark" data-background-color="#01172D">
-  <h2>Run Animation On Actions</h2>
-<pre class="fragment fade-up"><code>// app/components/comic-panel.js
-loop() {
-    this.draw();
-    this.nextFrame();
-    const loop = Ember.run.later(this, this.loop, 100);
-    this.set('currentLoop', loop);
-}
+  <h2>Run and Cancel Animations</h2>
+<pre class="fragment fade-up"><code>
+const loop = Ember.run.later(this, this.loop, 100);
+this.set('currentLoop', loop);
 </pre></code>
-<pre class="fragment fade-up"><code>// app/components/comic-panel.js
+<pre class="fragment fade-up"><code>
+if (!this.get('runAnimation')) {
   Ember.run.cancel(currentLoop);
   this.set('currentLoop', null);
+})
 </pre></code>
 </section>
 <section>
   <article class="panel">
     <h2>Demo Final</h2>
-    <a href="http://localhost:4200/demo-canvas" target="cdemo"><img src="./img/cdemo-2.jpg" alt="Gif of button clicking through animation step by step" /></a>
+    <a href="https://jessica-jordan.github.io/cartoon-demo/#/demo-waapi" target="cdemo"><img src="./img/cdemo-2.jpg" alt="Gif of button clicking through animation step by step" /></a>
   </article>
 </section>
 <section>       
@@ -676,9 +666,22 @@ export default Ember.Component.extend({
 /* app/components/comic-panel/template.hbs */
 {{#each comicLayerList as |layer|}}
   {{comic-layer keyFrames=layer.keyFrames
-                animationOptions=layer.animationOptions}}
+                animationOptions=layer.animationOptions
+                frameAction=(action "setKeyFrames")}}
 {{/each}}
 </pre></code>
+<pre class="fragment fade-up"><code>// app/components/comic-panel-layer.js
+createKeyFrames: Ember.on('didRender', function() {
+  // ...
+  const layer = this.get('element');
+  const keyFrame = new KeyframeEffect(
+                         layer, 
+                         this.get('keyFrames'), 
+                         this.get('animationOptions')
+                   );
+  this.sendAction('frameAction', keyFrame);
+}
+</code></fragment>
       </section>
       <section class="dark" data-background-color="#01172D">
      <h2>Synchronize the animation layers</h2>
@@ -718,7 +721,7 @@ export default Ember.Component.extend({
       </section>
 <section>
  <h2>Demo Final</h2>
- <a target="wdemo" href="http://localhost:4200/demo-waapi"><img src="./img/wdemo-2.jpg" alt="Web Animations Demo Layered" /></a>
+ <a target="wdemo" href="https://jessica-jordan.github.io/cartoon-demo/#/demo-waapi"><img src="./img/wdemo-2.jpg" alt="Web Animations Demo Layered" /></a>
 </section>
 <section>
   <article class="panel">
@@ -791,6 +794,9 @@ export default Ember.Component.extend({
 			Reveal.initialize({
 				history: true,
         controls: false,
+        keyboard: {
+          13: 'next'
+        },
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
