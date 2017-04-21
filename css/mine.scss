@@ -86,10 +86,12 @@ $headingSizeMain: 84px;
         width: 5em;
         height: 5em;
         text-align: center;
+
         img {
           position: relative;
           width: auto;
           max-width: none;
+          max-height: 140%;
           height: 500px;
           margin: 0 auto;
         }
@@ -169,6 +171,9 @@ $headingSizeMain: 84px;
       }
       a, .link {
         color: $highlight-2y;
+        &:hover {
+          color: $white;
+        }
       }
 
      .bubble {
@@ -245,6 +250,9 @@ $headingSizeMain: 84px;
 
         a, .link {
           color: $highlight-2y;
+          &:hover {
+            color: $white;
+          }
         } 
 
 
@@ -285,9 +293,17 @@ $headingSizeMain: 84px;
 
   }
   .controls {
-    display: none;
+    .navigate-up, .navigate-down {
+      display: none;
+    }
+    .navigate-right.enabled {
+      border-left-color: $black;
+      opacity: 1;
+    }
+    .navigate-left.enabled {
+      border-right-color: $black;
+    }
   }
-
 }
 
 
@@ -387,10 +403,20 @@ $headingSizeMain: 84px;
         background-color: $white;
         border-radius: 50% 50% 50% 50% / 50% 50% 60% 60%;
         box-shadow: .1em .1em .1em lighten($black, 25%);
+        transition: transform .4s ease-in-out,
+                    box-shadow .4s ease-in-out;
 
         &.smaller-text {
           font-size: $bubbleFont - 8;
 
+        }
+
+        &.woop {
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.2, 1.2);
+            box-shadow: .2em .2em .23m lighten($black, 40%);
+          }
         }
       }
 

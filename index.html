@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Animate The Web With EmberJS | Jessica Jordan @EmberConf 2017</title>
 
                 <link rel="stylesheet" href="css/mine.css">
 
@@ -70,8 +70,8 @@
 
           <h1>Animate the Web with EmberJS</h1>
 
-        <p><a href="http://jessicajordan.de">Jessica Jordan <br>@jjordan_dev</a></p>
-        <div style="position: absolute; bottom: -3em; right: -2em; width: 10em; height: 5em; padding-top: 1em;" class="bubble"><h3>EmberConf 2017<h3></div>        
+        <p><a href="http://jessicajordan.de" title="Jessica Jordan's Portfolio">Jessica Jordan</a> <br><a href="https://twitter.com/jjordan_dev" target="twitter" title="Follow Jessica Jordan on Twitter to hear more about animations, web development and Ember.js"><img style="position: absolute; left: -60px; top: -10px;" height="100" src="./img/twitter-round.png"/>jjordan_dev</a></p>
+        <div style="position: absolute; bottom: -3em; right: -2em; width: 10em; height: 5em; padding-top: 1em;" class="bubble woop"><a href="https://www.youtube.com/watch?v=wFJPIjRTIVU" title="Watch the full talk on Youtube" target="talkrecording"><h3>EmberConf 2017</h3></a></div>        
         </article>
       </section>
       <section class="dark" data-background-color="#34BFDE">
@@ -91,14 +91,14 @@
             <img height="150" width="auto" src="./img/food.jpg" alt="Vegan Food"/>
             </div>
             <div class="round round-two fragment fade-up">
-            <img src="./img/kimface.jpg" alt="Drawing Example"/>
+            <img style="left: -180px;" src="./img/kimface.jpg" alt="Drawing Example"/>
             </div>
             <div class="round round-three fragment fade-up">
-            <img src="./img/wfcolearning.jpg" alt="WFCOlearning"/>
+            <a href="http://www.opentechschool.org/" target="ots" alt="OpentechSchool Event Photo: Web Front-End Co-Learning Group in Berlin" title="Free Workshops and Learning Resources around tech by OpenTechSchool"><img src="./img/wfcolearning.jpg" alt="WFCOlearning"/></a>
             </div>
           <div class="round round-four fragment fade-up">
           <p class="smaller-text row">
-            <img  src="./img/lindseyio-tomster-thumb.png" alt="Tomster EmberJS Artist: http://lindsey.io"/></p>
+            <a href="https://www.meetup.com/Ember-js-Berlin/" target="emberjsberlin" alt="EmberJS Berlin Meetup Group" title="EmberJS Berlin Meetup Group"><img style="top: -10px; left: -30px;" src="./img/lindseyio-tomster-thumb.png" alt="Tomster Logo by EmberJS Artist: http://lindsey.io"/></a></p>
           </div>
         </div>
        </article>
@@ -121,7 +121,7 @@
           <h2>Animations may refer to...</h2>
           <div class="row">
             <div class="col s12 fragment fade-up">
-              <p>UI Elements</p>
+              <p>Interactions on UI Elements</p>
               <button class="button-90s">:hover</button>
             </div>
          </article>
@@ -131,8 +131,9 @@
           <h2>Animations may refer to...</h2>
           <div class="row">
             <div class="col s12 fragment fade-up">
+              <p>Page Transitions</p>
               <img height="150" src="./img/logosjs/liquid-fire.svg" alt="Liquid Fire" />
-              <p><small class="fragment fade-up">e.g Ember Liquid Fire</small></p>
+              <p><small class="fragment fade-up">with e.g Ember Liquid Fire</small></p>
             </div>
          </article>
       </section>
@@ -142,7 +143,7 @@
           <div class="row">
             <div class="col s12 fragment fade-up">
               <p>Data Visualization</p>
-              <img height="150" src="./img/SVG.svg" alt="SVG Icon" />
+              <a href="https://www.youtube.com/watch?v=ZC3lD_DFlkc" target="jenweberatemberconf" title="Learn more about SVG driven animations in Jen Weber's EmberConf Talk"><img height="150" src="./img/SVG.svg" alt="SVG Icon" /></a>
               <!-- <small class="fragment fade-up">Jen Weber's EmberConf talk on "SVG Animation and Interaction in Ember" tomorrow</small> -->
             </div>
          </article>
@@ -177,7 +178,7 @@
            <h2>Frame-By-Frame Animations</h2>
            <div class="row">
             <div class="col s12">
-              <img height="300" src="./img/horse-sequence.jpg" alt="The Horse In Motion" />
+              <a href="http://www.hrc.utexas.edu/exhibitions/permanent/windows/southeast/eadweard_muybridge.html" target="muybridge"><img height="300" src="./img/horse-sequence.jpg" alt="The Horse In Motion" /></a>
               <p><small>Muybridge - The Horse In Motion, 1878</small></p>
             </div>
            </div>
@@ -190,7 +191,7 @@
            <h2>Frame-By-Frame Animations</h2>
            <div class="row">
             <div class="col s12">
-              <img height="300" src="./img/horse.gif" alt="The Horse In Motion - Animated" />
+              <a href="http://www.hrc.utexas.edu/exhibitions/permanent/windows/southeast/eadweard_muybridge.html" target="muybridge"><img height="300" src="./img/horse.gif" alt="The Horse In Motion - Animated" /></a>
               <p><small>Muybridge - The Horse In Motion, 1878</small></p>
             </div>
            </div>
@@ -199,7 +200,7 @@
 
       <section>
         <h2>Animations - A Definition</h2>
-        <p><span class="fragment fade-up">Image Sequence</span> + <span class="fragment fade-up">Display Frequency</span> = <span class="fragment fade-up">Illusion of motion</span></p>
+        <p><span class="fragment fade-up">Image Sequence</span> <span class="fragment fade-up">+</span> <span class="fragment fade-up">Display Frequency =</span> <span class="fragment fade-up">Illusion of motion</span></p>
       <aside class="notes">
         <p class="fragment fade-up">"Animation is the process of making the illusion of motion and the illusion of change by means of the rapid display of a sequence of images that minimally differ from each other."</p>
       </aside>
@@ -208,9 +209,9 @@
       <section data-background-image="./img/brain.jpg">
           <article class="panel fragment fade-up">
             <h2>Smooth Animations Powered by your Brain</h2>
-            <img class="fragment fade-up" height="200" src="./img/Phi.png" alt="Phi Greek Letter" />
+            <a href="https://en.wikipedia.org/wiki/Phi_phenomenon" target="phi" title="More about the Phi Phenomenon on Wikipedia"><img class="fragment fade-up" height="200" src="./img/Phi.png" alt="Phi Greek Letter" /></a>
             <img class="fragment fade-up" height="200" src="./img/max.jpg" alt="Max Wertheimer 1880 - 1943"/>
-            <p class="fragment fade-up">"Phi Phenomenon" - Gestalt Psychology by Max Wertheimer (1912)</p>
+            <p class="fragment fade-up">Phi Phenomenon <br> <small>Gestalt Psychology by Max Wertheimer (1912)</small></p>
           </article>
       </section>
 
@@ -650,7 +651,7 @@ export default Ember.Component.extend({
       </section> -->
       <section>
         <article class="panel">
-        <h2 class="fragment fade-up">Is there more to animations than this?</h2>
+        <h2 class="fragment fade-up">Let's make it real</h2>
         <img class="fragment fade-up" src="./img/wdemo-2.jpg" alt="Web Animations Demo Layered" />
         </article>
       </section>
@@ -749,16 +750,6 @@ export default Ember.Component.extend({
           <span>jessicajordan.de</span></a></div>
         </article>
       </section> -->
-      <!-- <section>
-        <article class="panel">
-          <h2>Resources</h2>
-          <ul>
-           <li>Tomster Illustrations by <a href="http://lindsey.io">Lindsey Wilson</a></li>
-           <li>"Endless Canvas" Quote from <a href="https://medium.com/panel-frame/storytelling-on-the-shoulders-of-giants-a57a850b935d#.j9l1czgww" target="endless">Rachel Nabor's Keynote @ OSCON 2014: "Storytelling On The Shoulders of Giants"</a></li>
-           <li>More On the Web Animations API on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API" target="waapi">excellent How To Guide at MDN</a></li>
-          </ul>
-        </article>
-      </section> -->
       <section data-background-color="#7199C4" data-background-image="./img/kim.gif">
         <h1 class="chapter-title">Animations</h1>
         <h2 class="chapter-subtitle">Epilogue</h2>
@@ -776,10 +767,24 @@ export default Ember.Component.extend({
         </h2>
       </section>
       <section>
+        <article class="panel">
+          <h2>Resources</h2>
+          <ul>
+           <li>Tomster and Zoey Illustration by <a href="http://lindsey.io">Lindsey Wilson</a></li>
+           <li>&nbsp;</li>
+           <li>"Endless Canvas" quote from <a href="https://medium.com/panel-frame/storytelling-on-the-shoulders-of-giants-a57a850b935d#.j9l1czgww" target="endless">Rachel Nabor's Keynote @ OSCON 2014: "Storytelling On The Shoulders of Giants"</a></li>
+           <li>&nbsp;</li> 
+           <li>Learn mor about the Web Animations API with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API" target="waapi">excellent How To Guide at MDN</a></li>
+           <li>&nbsp;</li>
+           <li><a href="https://github.com/jessica-jordan/cartoon-demo" target="githubproject">Full source code for the animation demos</a></li>
+           </ul>
+        </article>
+      </section>
+      <section>
        <article class="panel racoon-hero">
-         <div style="text-align: right; width: 12em;" class="asided">
+         <div style="text-align: right; width: 12em; padding-right: 30px;" class="asided">
             <h2 class="fragment fade-up">Thank you!</h2>
-            <p class="fragment fade-up">Jessica Jordan <br> @jjordan_dev <br> jessica-jordan</p>
+            <p class="fragment fade-up">Jessica Jordan <br> <a href="https://twitter.com/jjordan_dev" target="twitter"><img style="position: absolute; left: -60px; top: -10px;"  src="./img/twitter-round.png" height="50">jjordan_dev</a></p>
          </div>
        </article>
       </section>
@@ -793,7 +798,7 @@ export default Ember.Component.extend({
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-        controls: false,
+        controls: true,
         keyboard: {
           13: 'next'
         },

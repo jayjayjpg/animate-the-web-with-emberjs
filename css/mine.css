@@ -8018,6 +8018,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     position: relative;
     width: auto;
     max-width: none;
+    max-height: 140%;
     height: 500px;
     margin: 0 auto; }
   .reveal section .round.round-one {
@@ -8075,6 +8076,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 72px; }
   .reveal section .panel a, .reveal section .panel .link {
     color: #01172D; }
+    .reveal section .panel a:hover, .reveal section .panel .link:hover {
+      color: #FAFFF2; }
   .reveal section .panel .bubble {
     display: block;
     font-size: 38px;
@@ -8126,6 +8129,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .reveal section .start a, .reveal section .start .link, .reveal section .yellow a, .reveal section .yellow .link {
   color: #01172D; }
+  .reveal section .start a:hover, .reveal section .start .link:hover, .reveal section .yellow a:hover, .reveal section .yellow .link:hover {
+    color: #FAFFF2; }
 
 .reveal section .dark h1, .reveal section .dark h2, .reveal section .dark h3, .reveal section .dark h4, .reveal section .dark h5, .reveal section .dark p, .reveal section.dark h1, .reveal section.dark h2, .reveal section.dark h3, .reveal section.dark h4, .reveal section.dark h5, .reveal section.dark p {
   color: #FAFFF2; }
@@ -8147,8 +8152,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .reveal section a, .reveal section .link {
   color: #01172D; }
 
-.reveal .controls {
+.reveal .controls .navigate-up, .reveal .controls .navigate-down {
   display: none; }
+
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #343441;
+  opacity: 1; }
+
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #343441; }
 
 .reveal .controls {
   display: none; }
@@ -8232,9 +8244,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   height: 4em;
   background-color: #FAFFF2;
   border-radius: 50% 50% 50% 50% / 50% 50% 60% 60%;
-  box-shadow: 0.1em 0.1em 0.1em #6d6d88; }
+  box-shadow: 0.1em 0.1em 0.1em #6d6d88;
+  transition: transform .4s ease-in-out, box-shadow .4s ease-in-out; }
   .bubble.smaller-text {
     font-size: 30px; }
+  .bubble.woop {
+    cursor: pointer; }
+    .bubble.woop:hover {
+      transform: scale(1.2, 1.2);
+      box-shadow: 0.2em 0.2em 0.23m #9696ab; }
 
 @keyframes racoon-fly {
   to {
