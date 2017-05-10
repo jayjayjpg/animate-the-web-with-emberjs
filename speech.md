@@ -92,7 +92,7 @@ Due to different various developments around the platform browser coverage drast
 Flash based technologies on webstes started to slow down. It seemed The Flash era slowly came to an end, but not without
 forging the way for a new star on the multimedia horizon: 
 
-???? Somehow come to the conclusion that also
+???? I might somehow come to the conclusion that also
 propietariness of the technology to a large part finally killed Flash ?????
 
 
